@@ -189,7 +189,7 @@ client.on('message', msg => {
     case 'bammer':
       bammer(msg, args);
       break;
-    case 'kys':
+    case 'kms':
       kys(msg, args);
       break;
     case 'nun':
