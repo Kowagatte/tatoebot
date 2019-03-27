@@ -108,7 +108,7 @@ function deletethis(msg, args){
 
 function help(msg, args){
   if(!args.length){
-    msg.channel.send(" - Roll\n ( Roll [number of sides] ) or ( Roll [number of dice] [number of sides] ) \n \n - Spank \n Generates a random entry from the spankbank. \n \n - bammer \n Showcases the ban hammer. \n \n - kys \n Do it, it's painless. \n \n - nun \n Say the line bart. \n \n - dab \n hit the hard dab. \n \n - clear \n ( clear [amount of lines] : does not count the clear message line.)");
+    msg.channel.send(" - Roll\n ( Roll [number of sides] ) or ( Roll [number of dice] [number of sides] ) \n \n - Spank \n Generates a random entry from the spankbank. \n \n - bammer \n Showcases the ban hammer. \n \n - kms \n Do it, it's painless. \n \n - nun \n Say the line bart. \n \n - dab \n hit the hard dab. \n \n - clear \n ( clear [amount of lines] : does not count the clear message line.)");
   }
   return;
 }
