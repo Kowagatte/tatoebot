@@ -140,6 +140,16 @@ function dab(msg, args){
   }
   return;
 }
+function lmddgtfy(msg,args){
+  if(args.length > 0){
+    let searchQuery = "https://lmddgtfy.net/?q=";
+    for(let i =0; i < args.length;i++){
+      searchQuery += args[i] + '%20';
+    }
+    msg.channel.send(searchQuery);
+  }
+  return;
+}
 
 client.on('ready', () => {
   client.user.setActivity('Out here getting paper.');
@@ -197,6 +207,9 @@ client.on('message', msg => {
       break;
     case 'dab':
       dab(msg, args);
+      break;
+    case 'lmddgtfy':
+      lmddgtfy(msg,args);
       break;
   }
   return;
