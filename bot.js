@@ -152,7 +152,7 @@ function lmddgtfy(msg,args){
 }
 function screenshare(msg,args){
   if(!args.length && msg.member.voiceChannel != null){
-    msg.channel.send('https://discordapp.com/channels/${msg.guild.id}/${msg.member.voiceChannelID}');
+    msg.channel.send(`https://discordapp.com/channels/${msg.guild.id}/${msg.member.voiceChannelID}`);
   }else{
     msg.channel.send("Please join a voice channel and try again.");
   }
