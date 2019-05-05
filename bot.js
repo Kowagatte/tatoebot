@@ -28,6 +28,19 @@ async function getNhentaiNumbersAsync(channel) {
   return;
 }
 
+function terraria(msg, args){
+  if(args.length == 1){
+    if(args[0].toLowerCase() == "restart"){
+      var http = new XMLHttpRequest();
+      http.open("POST", "http://localhost:8080/", true);
+      http.send();
+      msg.channel.send("Server is restarting give it a couple minutes!")
+      return;
+    }
+  }
+  return;
+}
+
 function spank(msg, args){
   if(!args.length){
     storage.bucket('damocles_tatoebot').getFiles(function(err, files) {
@@ -185,6 +198,9 @@ client.on('message', msg => {
     return;
   }
 
+  if(command == null)
+    return;
+
   switch(command){
     case 'roll':
       roll(msg, args);
@@ -221,6 +237,9 @@ client.on('message', msg => {
       break;
     case 'screenshare':
       screenshare(msg,args);
+      break;
+    case 'terraria':
+      terraria(msg,args);
       break;
   }
   return;
