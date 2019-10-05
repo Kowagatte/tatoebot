@@ -40,6 +40,13 @@ function terraria(msg, args){
   }
   return;
 }
+function inspire(msg,args){
+  let url = 'http://inspirobot.me/api?generate=true'
+  var http = new XMLHttpRequest();
+  http.open('GET', url, false);
+  http.send();
+  if(http.status != 404) msg.channel.send(http.responseText);
+}
 
 function spank(msg, args){
   if(!args.length){
@@ -240,6 +247,9 @@ client.on('message', msg => {
       break;
     case 'terraria':
       terraria(msg,args);
+      break;
+    case 'inspire':
+      inspire(msg,args);
       break;
   }
   return;
