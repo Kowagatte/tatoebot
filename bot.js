@@ -1,7 +1,6 @@
 const fs = require('fs');
 const token = require("./token.json");
 const discord = require("discord.js");
-const google_cloud = require("@google-cloud/storage");
 
 //-----------------------------------------------//
 
