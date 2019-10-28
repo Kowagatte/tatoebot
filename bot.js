@@ -1,5 +1,5 @@
 const fs = require('fs');
-const token = require("./token.json");
+const values = require("./values.json");
 const discord = require("discord.js");
 
 //-----------------------------------------------//
@@ -42,5 +42,4 @@ client.on('message', message =>{
 
 });
 
-client.login(token.token);
-
+client.login(values.token);

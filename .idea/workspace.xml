@@ -2,15 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b8edccbb-d7b7-4845-abe4-e2ad2a43206c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commands/dab.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commands/deletethis.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commands/kys.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commands/lmddgtfy.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commands/nun.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commands/screenshare.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commands/spank.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/commands/help.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/commands/role.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/values.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bot.js" beforeDir="false" afterPath="$PROJECT_DIR$/bot.js" afterDir="false" />
     </list>
@@ -81,7 +75,8 @@
       <workItem from="1572039492084" duration="1142000" />
       <workItem from="1572040649664" duration="7105000" />
       <workItem from="1572111556961" duration="4178000" />
-      <workItem from="1572116239065" duration="1610000" />
+      <workItem from="1572116239065" duration="8742000" />
+      <workItem from="1572236162135" duration="3829000" />
     </task>
     <servers />
   </component>
@@ -93,7 +88,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
