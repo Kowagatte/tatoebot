@@ -1,5 +1,6 @@
 module.exports = {
     name: 'delete',
+    customTrigger: {flag: false},
     description: 'please delete the last post.',
     execute(message, args) {
         if(args.length == 1 && args[0] == "this"){

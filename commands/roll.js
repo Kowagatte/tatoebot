@@ -1,5 +1,6 @@
 module.exports = {
     name: 'roll',
+    customTrigger: {flag: false},
     description: 'Rolls a dice, with arg0 sides, arg1 times.',
     execute(message, args) {
 

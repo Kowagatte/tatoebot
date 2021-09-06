@@ -1,5 +1,6 @@
 module.exports = {
     name: 'clear',
+    customTrigger: {flag: false},
     description: 'clears arg0 amount of lines. (Max: 13)',
     execute(message, args) {
         if(args.length == 1){

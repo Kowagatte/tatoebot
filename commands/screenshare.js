@@ -1,5 +1,6 @@
 module.exports = {
     name: 'screenshare',
+    customTrigger: {flag: false},
     description: 'Shares your screen!',
     execute(message, args) {
         if(message.member.voiceChannel != null){

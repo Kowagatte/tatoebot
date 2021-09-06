@@ -4,6 +4,7 @@ const storage = new Storage();
 
 module.exports = {
     name: 'spank',
+    customTrigger: {flag: false},
     description: 'So you can go Shake hands with Dr. Winky!',
     execute(message, args) {
         if(!args.length){

@@ -2,6 +2,7 @@ const https = require('https');
 
 module.exports = {
     name: 'inspire',
+    customTrigger: {flag: false},
     description: 'Ping!',
     execute(message, args) {
         const options = new URL('https://inspirobot.me/api?generate=true');

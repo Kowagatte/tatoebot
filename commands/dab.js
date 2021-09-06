@@ -1,5 +1,6 @@
 module.exports = {
     name: 'dab',
+    customTrigger: {flag: false},
     description: 'Dab on the haters with this brand new state of the art robot!',
     execute(message, args) {
         if(!args.length){

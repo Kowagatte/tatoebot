@@ -1,5 +1,6 @@
 module.exports = {
     name: 'kys',
+    customTrigger: {flag: false},
     description: 'Just fucking do it pussy.',
     execute(message, args) {
         if(!args.length){

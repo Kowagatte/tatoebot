@@ -10,7 +10,7 @@
   "author": "Kowagatte, ElegantBeef",
   "license": "MIT",
   "dependencies": {
-    "discord.js": "^11.5.1",
+    "discord.js": "^11.6.4",
     "xmlhttprequest": "^1.8.0"
   },
   "devDependencies": {

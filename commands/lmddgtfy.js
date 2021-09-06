@@ -1,5 +1,6 @@
 module.exports = {
     name: 'lmddgtfy',
+    customTrigger: {flag: false},
     description: 'Let me duck duck go that for you.',
     execute(message, args) {
         if(args.length > 0){

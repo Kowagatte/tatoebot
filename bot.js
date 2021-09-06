@@ -1,5 +1,5 @@
+const values = require("./values.json")
 const fs = require('fs');
-const values = require("./values.json");
 const discord = require("discord.js");
 
 //-----------------------------------------------//
@@ -7,11 +7,19 @@ const discord = require("discord.js");
 const client = new discord.Client();
 client.commands = new discord.Collection();
 const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
+const customTriggerCommands = []
 
 //-----------------------------------------------//
 
 for (const file of commandFiles){
     const command = require(`./commands/${file}`);
+    if(command.customTrigger.flag){
+        customTriggerCommands.push({
+            name: command.name,
+            prefix: command.customTrigger.prefix,
+            suffix: command.customTrigger.suffix
+        });
+    }
     client.commands.set(command.name, command);
 }
 
@@ -24,13 +32,15 @@ client.on('ready', () => {
 
 client.on('message', message =>{
     if(message.author.bot) return;
-    const args = message.content.split(' ');
+    let args = message.content.split(' ');
     const command = args.shift().toLowerCase();
 
-    if(message.content.startsWith('[') && message.content.endsWith(']') && message.content.length == 8){
-        client.commands.get('nhentai').execute(message, command.replace("[", "").replace("]", ""));
-        return;
-    }
+    customTriggerCommands.forEach((trigger)=>{
+        if(message.content.startsWith(trigger.prefix) && message.content.endsWith(trigger.suffix)){
+            args = message.content.replace(trigger.prefix, "").replace(trigger.suffix, "").split(' ')
+            client.commands.get(trigger.name).execute(message, args)
+        }
+    });
 
     if (!client.commands.has(command)) return;
 
@@ -42,4 +52,6 @@ client.on('message', message =>{
 
 });
 
-client.login(values.token);
+client.login(values.token).then(r => {
+    console.log(r)
+});

@@ -1,5 +1,6 @@
 module.exports = {
     name: 'nun',
+    customTrigger: {flag: false},
     description: 'Nuns, omegalul',
     execute(message, args) {
         if(!args.length){

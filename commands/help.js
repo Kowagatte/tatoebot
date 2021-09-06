@@ -1,11 +1,12 @@
 module.exports = {
     name: 'help',
+    customTrigger: {flag: false},
     description: 'Displays all commands and their descriptions!',
     execute(message, args) {
-        if(args.length == 0){
+        if(args.length === 0){
             let s = "\n```";
             message.client.commands.forEach(command =>{
-                if(command.name != "help") s += command.name + ": " +command.description + '\n';
+                if(command.name !== "help") s += command.name + ": " +command.description + '\n';
             });
             s += '```';
             message.reply(s);
